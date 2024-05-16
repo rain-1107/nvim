@@ -1,0 +1,2 @@
+-- own config
+require("rain")
