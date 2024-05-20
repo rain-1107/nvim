@@ -12,7 +12,7 @@ vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = 'C:/Users/funfu/AppData/Local/nvim-data/undo'
+vim.opt.undodir = 'nvim-data/undo'
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
