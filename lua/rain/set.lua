@@ -12,7 +12,7 @@ vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = 'nvim-data/undo'
+vim.opt.undodir = '$HOME/nvim-data/undo'
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
