@@ -11,16 +11,22 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
-    -- theme 
+    --[[ 
     use({'navarasu/onedark.nvim',
     config = function()
         require('onedark').setup {
-            style = 'darker'
+            style = 'cool'
         }
         require('onedark').load()
     end
+    }) 
+    ]]--
+    use({'craftzdog/solarized-osaka.nvim',
+    config=function()
+        require("solarized-osaka").setup = {}
+        require("solarized-osaka").load()
+    end
     })
-
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('theprimeagen/harpoon')
     use('mbbill/undotree')
