@@ -10,23 +10,19 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.6',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
-
-    --[[ 
+ 
     use({'navarasu/onedark.nvim',
     config = function()
         require('onedark').setup {
-            style = 'cool'
+            style = 'darker'
         }
         require('onedark').load()
     end
     }) 
-    ]]--
-    use({'craftzdog/solarized-osaka.nvim',
-    config=function()
-        require("solarized-osaka").setup = {}
-        require("solarized-osaka").load()
-    end
-    })
+    use({'feline-nvim/feline.nvim',
+    config = function() 
+        require('feline').setup()
+    end})
     use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('theprimeagen/harpoon')
     use('mbbill/undotree')

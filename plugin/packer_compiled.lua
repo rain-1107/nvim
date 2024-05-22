@@ -89,6 +89,12 @@ _G.packer_plugins = {
     path = "C:\\Users\\funfu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  ["feline.nvim"] = {
+    config = { "\27LJ\2\n4\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vfeline\frequire\0" },
+    loaded = true,
+    path = "C:\\Users\\funfu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\feline.nvim",
+    url = "https://github.com/feline-nvim/feline.nvim"
+  },
   ["gitsigns.nvim"] = {
     loaded = true,
     path = "C:\\Users\\funfu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\gitsigns.nvim",
@@ -140,6 +146,12 @@ _G.packer_plugins = {
     path = "C:\\Users\\funfu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
+  ["onedark.nvim"] = {
+    config = { "\27LJ\2\nb\0\0\3\0\5\0\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\0\0'\2\1\0B\0\2\0029\0\4\0B\0\1\1K\0\1\0\tload\1\0\1\nstyle\vdarker\nsetup\fonedark\frequire\0" },
+    loaded = true,
+    path = "C:\\Users\\funfu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\onedark.nvim",
+    url = "https://github.com/navarasu/onedark.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "C:\\Users\\funfu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\packer.nvim",
@@ -149,12 +161,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\funfu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
-  },
-  ["solarized-osaka.nvim"] = {
-    config = { "\27LJ\2\nV\0\0\3\0\4\0\v6\0\0\0'\2\1\0B\0\2\0024\1\0\0=\1\2\0006\0\0\0'\2\1\0B\0\2\0029\0\3\0B\0\1\1K\0\1\0\tload\nsetup\20solarized-osaka\frequire\0" },
-    loaded = true,
-    path = "C:\\Users\\funfu\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\solarized-osaka.nvim",
-    url = "https://github.com/craftzdog/solarized-osaka.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -174,14 +180,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: solarized-osaka.nvim
-time([[Config for solarized-osaka.nvim]], true)
-try_loadstring("\27LJ\2\nV\0\0\3\0\4\0\v6\0\0\0'\2\1\0B\0\2\0024\1\0\0=\1\2\0006\0\0\0'\2\1\0B\0\2\0029\0\3\0B\0\1\1K\0\1\0\tload\nsetup\20solarized-osaka\frequire\0", "config", "solarized-osaka.nvim")
-time([[Config for solarized-osaka.nvim]], false)
+-- Config for: feline.nvim
+time([[Config for feline.nvim]], true)
+try_loadstring("\27LJ\2\n4\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vfeline\frequire\0", "config", "feline.nvim")
+time([[Config for feline.nvim]], false)
 -- Config for: indent-blankline.nvim
 time([[Config for indent-blankline.nvim]], true)
 try_loadstring("\27LJ\2\n1\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\bibl\frequire\0", "config", "indent-blankline.nvim")
 time([[Config for indent-blankline.nvim]], false)
+-- Config for: onedark.nvim
+time([[Config for onedark.nvim]], true)
+try_loadstring("\27LJ\2\nb\0\0\3\0\5\0\f6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\0016\0\0\0'\2\1\0B\0\2\0029\0\4\0B\0\1\1K\0\1\0\tload\1\0\1\nstyle\vdarker\nsetup\fonedark\frequire\0", "config", "onedark.nvim")
+time([[Config for onedark.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
