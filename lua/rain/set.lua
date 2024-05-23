@@ -12,13 +12,25 @@ vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-local on_windows = vim.fn.has("win64") or vim.fn.has("win32")
-if not on_windows then
+
+-- Gets OSName found in: https://gist.github.com/Zbizu/43df621b3cd0dc460a76f7fe5aa87f30
+local fh, err = assert(io.popen("uname -o 2>/dev/null", "r"))
+if fh then
+    osname = fh:read()
+end
+
+if osname == 'GNU/Linux' then
+    print("Using Linux config")
+    vim.g.undotree_DiffCommand = 'diff'
     vim.opt.undodir = vim.fn.expand('$HOME/.config/vim-data/undo')
-else
+elseif osname == "Windows" then
+    print("Using Windows config")
     vim.g.undotree_DiffCommand = 'FC'
     vim.opt.undodir = vim.fn.expand('$HOME/AppData/Local/vim-data/undo')
+else
+    print("Unknown OS")
 end
+
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
