@@ -14,9 +14,11 @@ vim.opt.swapfile = false
 vim.opt.backup = false
 
 -- Gets OSName found in: https://gist.github.com/Zbizu/43df621b3cd0dc460a76f7fe5aa87f30
+local osname
 local fh, err = assert(io.popen("uname -o 2>/dev/null", "r"))
 if fh then
     osname = fh:read()
+    if not osname then osname = "Windows" end
 end
 
 if osname == 'GNU/Linux' then
