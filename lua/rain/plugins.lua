@@ -38,21 +38,33 @@ local plugins = {
             {'L3MON4D3/LuaSnip'},
         }
     },
-    'nvim-tree/nvim-web-devicons',
     {
-        "Aaronik/GPTModels.nvim",
-        dependencies = {
-            "MunifTanjim/nui.nvim",
-            "nvim-telescope/telescope.nvim"
-        }
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        ft = { "markdown" },
+        build = function() vim.fn["mkdp#util#install"]() end,
     },
+    'nvim-tree/nvim-web-devicons',
     {'lewis6991/gitsigns.nvim'},
     'romgrk/barbar.nvim',
     'lewis6991/gitsigns.nvim',
     {'lukas-reineke/indent-blankline.nvim',
     config = function()
         require("ibl").setup()
-    end}
+    end},
+    {
+        "jackMort/ChatGPT.nvim",
+        event = "VeryLazy",
+        config = function()
+            require("chatgpt").setup()
+        end,
+        dependencies = {
+            "MunifTanjim/nui.nvim",
+            "nvim-lua/plenary.nvim",
+            "folke/trouble.nvim",
+            "nvim-telescope/telescope.nvim"
+        }
+    }
 }
 
 local opt = {}
