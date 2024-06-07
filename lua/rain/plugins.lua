@@ -13,18 +13,32 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
     'wbthomason/packer.nvim',
+    {
+        'goolord/alpha-nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        config = function ()
+            require'alpha'.setup(require'alpha.themes.startify'.config)
+        end
+    },
+    {
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        build = "cd app && yarn install",
+        init = function()
+            vim.g.mkdp_filetypes = { "markdown" }
+        end,
+        ft = { "markdown" },
+    },
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
     {
         'nvim-telescope/telescope.nvim', tag = '0.1.6',
         dependencies = { {'nvim-lua/plenary.nvim'} }
     },
-    {'rebelot/kanagawa.nvim'},
     {'nvim-treesitter/nvim-treesitter', build=':TSUpdate',},
     'theprimeagen/harpoon',
     'mbbill/undotree',
     'famiu/feline.nvim',
     { "diegoulloao/neofusion.nvim", priority = 1000 , config = true, opts = ... },
-    { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
     'tpope/vim-fugitive',
     {
         'VonHeikemen/lsp-zero.nvim',
@@ -38,13 +52,17 @@ local plugins = {
             {'L3MON4D3/LuaSnip'},
         }
     },
-    {
-        "iamcco/markdown-preview.nvim",
-        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-        ft = { "markdown" },
-        build = function() vim.fn["mkdp#util#install"]() end,
-    },
+    {'kevinhwang91/nvim-hlslens'},
     'nvim-tree/nvim-web-devicons',
+    {
+        "folke/todo-comments.nvim",
+        dependencies = { "nvim-lua/plenary.nvim" },
+        opts = {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+        }
+    },
     {'lewis6991/gitsigns.nvim'},
     'romgrk/barbar.nvim',
     'lewis6991/gitsigns.nvim',

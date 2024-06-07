@@ -26,11 +26,11 @@ end
 if osname == 'GNU/Linux' then
     print("Using Linux config")
     vim.g.undotree_DiffCommand = 'diff'
-    vim.opt.undodir = vim.fn.expand('$HOME/.config/vim-data/undo')
+    vim.opt.undodir = vim.fn.expand('$HOME/.config/nvim-data/undo')
 elseif osname == "Windows" then
     print("Using Windows config")
     vim.g.undotree_DiffCommand = 'FC'
-    vim.opt.undodir = vim.fn.expand('$HOME/AppData/Local/vim-data/undo')
+    vim.opt.undodir = vim.fn.expand('$HOME/AppData/Local/nvim-data/undo')
 else
     print("Unknown OS")
 end

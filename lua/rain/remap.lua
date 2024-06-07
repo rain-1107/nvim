@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>w", vim.cmd.w)
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>c", vim.cmd.term)
-vim.keymap.set("n", "<leader>a", "]]ggvG<End>")
+vim.keymap.set("n", "<leader>al", "]]ggvG<End>")
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
@@ -13,7 +13,7 @@ vim.api.nvim_set_keymap('n', '<leader>g', ':GPTModelsChat<CR>', { noremap = true
 
 -- Language shortcuts
 -- Python
-vim.keymap.set("n", "<leader>pym", "iif __name__ == '__main__':<Enter>")
+vim.keymap.set("n", "<leader>pym", "odef main() -> None:<Enter>...<Enter><Enter><Backspace>if __name__ == '__main__':<Enter>main()<Esc>kkk")
 
 -- HTML
 vim.keymap.set("n", "<leader>h5", [=[i<!DOCTYPE html>
