@@ -13,6 +13,11 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
     'wbthomason/packer.nvim',
+    'xiyaowong/transparent.nvim',
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
     {
         'goolord/alpha-nvim',
         dependencies = { 'nvim-tree/nvim-web-devicons' },
@@ -37,7 +42,6 @@ local plugins = {
     {'nvim-treesitter/nvim-treesitter', build=':TSUpdate',},
     'theprimeagen/harpoon',
     'mbbill/undotree',
-    'famiu/feline.nvim',
     { "diegoulloao/neofusion.nvim", priority = 1000 , config = true, opts = ... },
     'tpope/vim-fugitive',
     {
@@ -64,7 +68,6 @@ local plugins = {
         }
     },
     {'lewis6991/gitsigns.nvim'},
-    'romgrk/barbar.nvim',
     'lewis6991/gitsigns.nvim',
     {'lukas-reineke/indent-blankline.nvim',
     config = function()
