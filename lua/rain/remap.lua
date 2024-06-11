@@ -2,9 +2,13 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>w", vim.cmd.w)
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>c", vim.cmd.term)
+vim.keymap.set("n", "<leader>nc", "<C-w>s <C-w>w <C-c> :term<Enter>")
+vim.keymap.set("n", "<leader>tt", ":TransparentToggle<Enter>")
+
 vim.keymap.set("n", "<leader>al", "]]ggvG<End>")
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
+
 
 --[[
 vim.api.nvim_set_keymap('v', '<leader>gc', ':GPTModelsCode<CR>', { noremap = true })
