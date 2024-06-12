@@ -8,6 +8,8 @@ vim.keymap.set("n", "<leader>tt", ":TransparentToggle<Enter>")
 -- Hightlights all (Ctrl+a)
 vim.keymap.set("n", "<leader>al", "]]ggvG<End>")
 
+
+-- So that lsp hints appear
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- Themes
