@@ -5,15 +5,15 @@ vim.keymap.set("n", "<leader>c", vim.cmd.term)
 vim.keymap.set("n", "<leader>nc", "<C-w>s <C-w>w <C-c> :term<Enter>")
 vim.keymap.set("n", "<leader>tt", ":TransparentToggle<Enter>")
 
+-- Hightlights all (Ctrl+a)
 vim.keymap.set("n", "<leader>al", "]]ggvG<End>")
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
+-- Themes
+vim.keymap.set("n", "<leader>tc", ":colorscheme catppuccin<Enter>")
+vim.keymap.set("n", "<leader>tn", ":colorscheme neofusion<Enter>")
 
---[[
-vim.api.nvim_set_keymap('v', '<leader>gc', ':GPTModelsCode<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<leader>g', ':GPTModelsChat<CR>', { noremap = true })
-]]--
 
 -- Language shortcuts
 -- Python
