@@ -13,6 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
     'wbthomason/packer.nvim',
+    'lambdalisue/vim-suda',
     'xiyaowong/transparent.nvim',
     {
         'nvim-lualine/lualine.nvim',
