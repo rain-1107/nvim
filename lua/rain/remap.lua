@@ -8,24 +8,29 @@ vim.keymap.set("n", "<leader>tt", ":TransparentToggle<Enter>")
 -- Hightlights all (Ctrl+a)
 vim.keymap.set("n", "<leader>al", "]]ggvG<End>")
 
-
 -- So that lsp hints appear
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- Themes
-vim.keymap.set("n", "<leader>tc", ":colorscheme catppuccin<Enter>")
-vim.keymap.set("n", "<leader>tn", ":colorscheme neofusion<Enter>")
-
+vim.keymap.set("n", "<leader>tc", ":colorscheme catppuccin<Enter>:Colorline<Enter>")
+vim.keymap.set("n", "<leader>tn", ":colorscheme neofusion<Enter>:Colorline<Enter>")
 
 -- Language shortcuts
 -- Go
 vim.keymap.set("n", "<leader>ge", [[iif err != nil {}<Esc>i<Enter><Enter><Esc>ki<Tab>]])
 
 -- Python
-vim.keymap.set("n", "<leader>pym", "odef main() -> None:<Enter>...<Enter><Enter><Backspace>if __name__ == '__main__':<Enter>main()<Esc>kkk")
+vim.keymap.set(
+	"n",
+	"<leader>pym",
+	"odef main() -> None:<Enter>...<Enter><Enter><Backspace>if __name__ == '__main__':<Enter>main()<Esc>kkk"
+)
 
 -- HTML
-vim.keymap.set("n", "<leader>h5", [=[i<!DOCTYPE html>
+vim.keymap.set(
+	"n",
+	"<leader>h5",
+	[=[i<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -34,4 +39,5 @@ vim.keymap.set("n", "<leader>h5", [=[i<!DOCTYPE html>
 </head>
 <body> 
 </body>
-</html><Esc>v]]gg=]=])
+</html><Esc>v]]gg=]=]
+)
