@@ -18,6 +18,9 @@ vim.keymap.set("n", "<leader>tn", ":colorscheme neofusion<Enter>")
 
 
 -- Language shortcuts
+-- Go
+vim.keymap.set("n", "<leader>ge", [[iif err != nil {}<Esc>i<Enter><Enter><Esc>ki<Tab>]])
+
 -- Python
 vim.keymap.set("n", "<leader>pym", "odef main() -> None:<Enter>...<Enter><Enter><Backspace>if __name__ == '__main__':<Enter>main()<Esc>kkk")
 

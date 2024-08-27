@@ -14,25 +14,27 @@ vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-
+vim.opt.undofile = true
 -- Gets OSName found in: https://gist.github.com/Zbizu/43df621b3cd0dc460a76f7fe5aa87f30
 local osname
 local fh, err = assert(io.popen("uname -o 2>/dev/null", "r"))
 if fh then
-    osname = fh:read()
-    if not osname then osname = "Windows" end
+	osname = fh:read()
+	if not osname then
+		osname = "Windows"
+	end
 end
 
-if osname == 'GNU/Linux' then
-    print("Using Linux config")
-    vim.g.undotree_DiffCommand = 'diff'
-    vim.opt.undodir = vim.fn.expand('$HOME/.config/nvim-data/undo')
+if osname == "GNU/Linux" then
+	print("Using Linux config")
+	vim.g.undotree_DiffCommand = "diff"
+	vim.opt.undodir = vim.fn.expand("$HOME/.config/nvim-data/undo")
 elseif osname == "Windows" then
-    print("Using Windows config")
-    vim.g.undotree_DiffCommand = 'FC'
-    vim.opt.undodir = vim.fn.expand('$HOME/AppData/Local/nvim-data/undo')
+	print("Using Windows config")
+	vim.g.undotree_DiffCommand = "FC"
+	vim.opt.undodir = vim.fn.expand("$HOME/AppData/Local/nvim-data/undo")
 else
-    print("Unknown OS")
+	print("Unknown OS")
 end
 
 vim.opt.hlsearch = false
@@ -42,4 +44,3 @@ vim.opt.termguicolors = true
 
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "100"
-
