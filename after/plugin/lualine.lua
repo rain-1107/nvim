@@ -12,6 +12,9 @@ function get_colour()
 		columncolor = colours[k]
 		break
 	end
+    if type(columncolor) ~= "number" then
+        return "#000000"
+    end
 	col = string.format("%x", columncolor)
 	if string.len(col) < 6 then
 		col = string.rep("0", 6 - string.len(col)) .. col
