@@ -11,11 +11,11 @@ require("mason-lspconfig").setup({
 	ensure_installed = {
 		"bashls",
 		"rust_analyzer",
-		"pyright",
+		"jedi_language_server",
 		"lua_ls",
 		"clangd",
 		"gopls",
-		"tsserver",
+		"ts_ls",
 	},
 	handlers = {
 		function(server_name)
