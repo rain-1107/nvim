@@ -15,7 +15,7 @@ require("mason-lspconfig").setup({
 		"lua_ls",
 		"clangd",
 		"gopls",
-		"ts_ls",
+		"tsserver",
 	},
 	handlers = {
 		function(server_name)
