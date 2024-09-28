@@ -1,5 +1,6 @@
 require("conform").setup({
 	formatters_by_ft = {
+        cpp = { lsp_format = "clangd" },
 		lua = { "stylua" },
 		-- Conform will run multiple formatters sequentially
 		python = { "black" },
