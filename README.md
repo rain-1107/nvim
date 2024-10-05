@@ -1,6 +1,3 @@
 # Requirements
-- Ripgrep
-- Clang (LLVM)
-- Python3
-- NodeJS
+```ripgrep clang python3 nodejs unzip```
 
