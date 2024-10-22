@@ -13,6 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
     "wbthomason/packer.nvim",
+    { "kevinhwang91/nvim-ufo", dependencies = "kevinhwang91/promise-async" },
     { "mfussenegger/nvim-dap" },
     "lambdalisue/vim-suda",
     {
@@ -40,7 +41,7 @@ local plugins = {
         end,
         ft = { "markdown" },
     },
-    { "catppuccin/nvim",      name = "catppuccin", priority = 1000 },
+    { "catppuccin/nvim",                 name = "catppuccin", priority = 1000 },
     {
         "nvim-telescope/telescope.nvim",
         tag = "0.1.6",
@@ -49,7 +50,7 @@ local plugins = {
     { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
     "theprimeagen/harpoon",
     "mbbill/undotree",
-    { "diegoulloao/neofusion.nvim",      priority = 1000,    config = true, opts = ... },
+    { "diegoulloao/neofusion.nvim", priority = 1000, config = true, opts = ... },
     "tpope/vim-fugitive",
     {
         "VonHeikemen/lsp-zero.nvim",
