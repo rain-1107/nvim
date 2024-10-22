@@ -4,6 +4,7 @@ require("conform").setup({
         lua = { lsp_format = "lua_ls" },
         python = { lsp_format = "pyright" },
         rust = { lsp_format = "rust_analyzer" },
+        go = { lsp_format = "gopls" },
         javascript = {},
     },
 })
