@@ -1,1 +1,1 @@
-
+require("render-markdown")
