@@ -1,5 +1,5 @@
 vim.opt.nu = true
-vim.opt.relativenumber = false
+vim.opt.relativenumber = true
 
 vim.opt.so = 8
 
@@ -19,22 +19,22 @@ vim.opt.undofile = true
 local osname
 local fh, err = assert(io.popen("uname -o 2>/dev/null", "r"))
 if fh then
-	osname = fh:read()
-	if not osname then
-		osname = "Windows"
-	end
+    osname = fh:read()
+    if not osname then
+        osname = "Windows"
+    end
 end
 
 if osname == "GNU/Linux" then
-	print("Using Linux config")
-	vim.g.undotree_DiffCommand = "diff"
-	vim.opt.undodir = vim.fn.expand("$HOME/.config/nvim-data/undo")
+    print("Using Linux config")
+    vim.g.undotree_DiffCommand = "diff"
+    vim.opt.undodir = vim.fn.expand("$HOME/.config/nvim-data/undo")
 elseif osname == "Windows" then
-	print("Using Windows config")
-	vim.g.undotree_DiffCommand = "FC"
-	vim.opt.undodir = vim.fn.expand("$HOME/AppData/Local/nvim-data/undo")
+    print("Using Windows config")
+    vim.g.undotree_DiffCommand = "FC"
+    vim.opt.undodir = vim.fn.expand("$HOME/AppData/Local/nvim-data/undo")
 else
-	print("Unknown OS")
+    print("Unknown OS")
 end
 
 vim.opt.hlsearch = false
