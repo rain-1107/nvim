@@ -13,11 +13,19 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
     {
+        '2kabhishek/nerdy.nvim',
+        dependencies = {
+            'stevearc/dressing.nvim',
+            'nvim-telescope/telescope.nvim',
+        },
+        cmd = 'Nerdy',
+    },
+    {
         "rmagatti/goto-preview",
         event = "BufEnter",
         config = true, -- necessary as per https://github.com/rmagatti/goto-preview/issues/88
     },
-    {            -- This plugin
+    {                  -- This plugin
         "Zeioth/compiler.nvim",
         cmd = { "CompilerOpen", "CompilerToggleResults", "CompilerRedo" },
         dependencies = { "stevearc/overseer.nvim", "nvim-telescope/telescope.nvim" },

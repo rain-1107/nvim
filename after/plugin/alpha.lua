@@ -51,7 +51,7 @@ dashboard.section.header.val = evangelion
 dashboard.section.buttons.val = {
     dashboard.button("e", "  > New file", ":ene <BAR> startinsert <CR>"),
     dashboard.button("r", "  > Explorer", ":Ex<CR>"),
-    dashboard.button("q", "  > Quit NVIM", ":qa<CR>"),
+    dashboard.button("q", "󰈆  > Quit NVIM", ":qa<CR>"),
 }
 
 -- Send config to alpha
