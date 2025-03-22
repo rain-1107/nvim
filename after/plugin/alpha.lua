@@ -50,7 +50,7 @@ dashboard.section.header.val = evangelion
 -- Set menu
 dashboard.section.buttons.val = {
     dashboard.button("e", "  > New file", ":ene <BAR> startinsert <CR>"),
-    dashboard.button("r", "  > Explorer", ":Ex<CR>"),
+    dashboard.button("r", "  > Explorer", "<leader>pv"),
     dashboard.button("q", "󰈆  > Quit NVIM", ":qa<CR>"),
 }
 

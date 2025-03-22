@@ -13,6 +13,16 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
     {
+        "nvim-telescope/telescope-file-browser.nvim",
+        dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+    },
+    {
+        'nosduco/remote-sshfs.nvim',
+        dependencies = 'nvim-telescope/telescope.nvim',
+        opts = {},
+    },
+    "github/copilot.vim",
+    {
         '2kabhishek/nerdy.nvim',
         dependencies = {
             'stevearc/dressing.nvim',

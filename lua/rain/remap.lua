@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>w", vim.cmd.w)
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv",
+    function() require("telescope").extensions.file_browser.file_browser { path = "%:p:h", select_buffer = true, hidden = true, no_ignore = false } end)
 vim.keymap.set("n", "<leader>c", vim.cmd.term)
 vim.keymap.set("n", "<leader>nc", "<C-w>s <C-w>w <C-c> :term<Enter>")
 vim.keymap.set("n", "<leader>tt", ":TransparentToggle<Enter>")
