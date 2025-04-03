@@ -12,6 +12,13 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+    "folke/tokyonight.nvim",
+    "rebelot/kanagawa.nvim",
+    "rose-pine/neovim",
+    "navarasu/onedark.nvim",
+    {
+        'andrew-george/telescope-themes',
+    },
     {
         "nvim-telescope/telescope-file-browser.nvim",
         dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }

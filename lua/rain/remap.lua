@@ -4,7 +4,9 @@ vim.keymap.set("n", "<leader>pv",
     function() require("telescope").extensions.file_browser.file_browser { path = "%:p:h", select_buffer = true, hidden = true, no_ignore = false } end)
 vim.keymap.set("n", "<leader>c", vim.cmd.term)
 vim.keymap.set("n", "<leader>nc", "<C-w>s <C-w>w <C-c> :term<Enter>")
-vim.keymap.set("n", "<leader>tt", ":TransparentToggle<Enter>")
+vim.keymap.set("n", "<leader>tt", ":Telescope themes<CR>")
+vim.keymap.set("n", "<leader>tp", ":TransparentToggle<CR>")
+
 
 -- Hightlights all (Ctrl+a)
 vim.keymap.set("n", "<C-a>", "gg<Home>vG<End>")
