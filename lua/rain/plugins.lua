@@ -12,6 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
+    { "AlphaTechnolog/pywal.nvim",       as = 'pywal' },
     "folke/tokyonight.nvim",
     "rebelot/kanagawa.nvim",
     "rose-pine/neovim",
